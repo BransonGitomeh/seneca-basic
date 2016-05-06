@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "application":"node finance & node users & node index",
+    "application":"node finance & node finance2 & node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
