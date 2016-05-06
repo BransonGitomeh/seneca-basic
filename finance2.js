@@ -1,7 +1,11 @@
 var seneca = require('seneca')()
 
-seneca.add({ role:'finance', cmd:'test2' }, function (args, callback) {
-  callback(null, { finance:"working" })
+seneca.add({ role:'finance2', cmd:'test' }, function (args, callback) {
+  callback(null, { finance2:"working" })
 })
 
-seneca.listen(8001)
+seneca.listen({
+	host: 'localhost',
+	port: 8001,
+  pin: 'role:finance2'
+})
