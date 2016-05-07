@@ -5,7 +5,7 @@ seneca.add({ role:'finance2', cmd:'test' }, function (args, callback) {
 })
 
 seneca.listen({
-	host: 'localhost',
+	// host: 'localhost',
 	port: 8001,
-  pin: 'role:finance2'
+  	// pin: 'role:finance2'
 })

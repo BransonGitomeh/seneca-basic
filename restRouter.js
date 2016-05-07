@@ -1,13 +1,10 @@
 var seneca = require('seneca')()
-
-seneca.client({
-	host: 'localhost',
+.client({
 	port: 8000,
 	pin: 'role:finance1'
 })
 
-seneca.client({
-	host: 'localhost',
+.client({
 	port: 8001,
 	pin: 'role:finance2'
 })
@@ -19,6 +16,10 @@ module.exports = (router) => {
 			console.log(responce)
 		})
 		
+		seneca.act("role:finance2, cmd:test",function(msg,responce){
+			console.log(responce)
+		})
+
 		seneca.act("role:finance2, cmd:test",function(msg,responce){
 			console.log(responce)
 		})
